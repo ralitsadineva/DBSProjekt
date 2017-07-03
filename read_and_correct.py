@@ -6,7 +6,7 @@ read_file = [row for row in creader]
     
 def extract_hash_tags(s):
     s = s.replace("# ", "#")
-    return set(part[1:] for part in s.split() if part.startswith('#'))
+    return set(part[1:].lower() for part in s.split() if part.startswith('#'))
     
 def get_all_hashtags(creader):
     hashtags = set()
